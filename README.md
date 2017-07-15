@@ -6,14 +6,14 @@ R custom visual for Microsoft Power BI
 
 ![](https://github.com/deldersveld/rDataTable/raw/master/images/rDataTable.PNG)
 
-Based on the [DT package](https://rstudio.github.io/DT/), **rDataTable** is a Power BI **R** custom visual that helps you easily explore your table data.  
+Based on the [DT package](https://rstudio.github.io/DT/), **rDataTable** is a Power BI **R** custom visual that helps you easily explore table data.  
 
 * **Search** 
   * Global search field filters data across all columns  
   ![](https://github.com/deldersveld/rDataTable/raw/master/images/GlobalSearch.PNG)  
   
 * **Paginated**
-  * Use "Show # of entries" to choose between 5, 10, 25, 100, or 1000 records to display per page  
+  * Use "Show # of entries" to choose between 5, 10, 25, 50, 100, or 1000 records to display per page  
   ![](https://github.com/deldersveld/rDataTable/raw/master/images/ShowEntries.PNG)  
   
 * **Column-level filters**
