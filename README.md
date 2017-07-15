@@ -44,7 +44,8 @@ rDataTable requires the **htmlwidgets** and **DT** packages installed in your lo
 All required packages are currently available in the Power BI Service. rDataTable runs in Power BI Service and has been tested in Chrome, Firefox, and Edge.
 
 ### Power BI Mobile
-rDataTable runs as a fully interactive visual in the Mobile app and has been tested in iOS (Android testing still needed).
+rDataTable runs as a fully interactive visual in the Mobile app and has been tested in iOS (Android testing still needed).  
+![](https://github.com/deldersveld/rDataTable/raw/master/images/iOS0.jpg) ![](https://github.com/deldersveld/rDataTable/raw/master/images/iOS1.jpg) ![](https://github.com/deldersveld/rDataTable/raw/master/images/iOS2.jpg)
 
 ### Embedded or Publish to Web
 This functionality is not available to any R Visuals in Power BI as of July 2017.
