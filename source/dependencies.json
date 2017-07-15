@@ -1,0 +1,14 @@
+{
+  "cranPackages": [
+    {
+      "name": "htmlwidgets",
+      "displayName": "HTML Widgets",
+      "url": "https://cran.r-project.org/web/packages/htmlwidgets/index.html"
+    },
+	{
+      "name": "DT",
+      "displayName": "DT",
+      "url": "https://cran.r-project.org/web/packages/DT/index.html"
+    }
+  ]
+}
