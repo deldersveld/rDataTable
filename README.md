@@ -53,15 +53,5 @@ rDataTable runs as a fully interactive visual in the Mobile app and has been tes
 This functionality is not available to any R Visuals in Power BI as of July 2017.
 
   
-## Develop!
-rDataTable is an open-source project available under the MIT license. Feel free to fork, develop, and submit a pull request if you have changes or fixes.  
-
-Particular areas of need include:  
-* Adding Format options so that users can customize items such as default records per page, etc.
-* Determining if there is a way to easily obtain Power BI's data formats such as Currency and Percentage and apply that in R visuals like rDataTable
-* Error handling
-* Testing on Safari and Android
-  
-  
 ## Support
 rDataTable is provided "as-is" with no direct developer support. If you find an issue with the visual, please log it here on GitHub. Please note that logging an issue is no guarantee that your issue will be resolved.
