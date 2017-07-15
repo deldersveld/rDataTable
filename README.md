@@ -12,7 +12,7 @@ Based on the [DT package](https://rstudio.github.io/DT/), **rDataTable** is a Po
 
 ![](https://github.com/deldersveld/rDataTable/raw/master/images/rDataTable.PNG)
 
-
+  
 ## Functionality  
 Some of the benefits of rDataTable include:  
 
@@ -52,7 +52,7 @@ rDataTable runs as a fully interactive visual in the Mobile app and has been tes
 ### Embedded or Publish to Web
 This functionality is not available to any R Visuals in Power BI as of July 2017.
 
-
+  
 ## Develop!
 rDataTable is an open-source project available under the MIT license. Feel free to fork, develop, and submit a pull request if you have changes or fixes.  
 
@@ -61,6 +61,7 @@ Particular areas of need include:
 * Determining if there is a way to easily obtain Power BI's data formats such as Currency and Percentage and apply that in R visuals like rDataTable
 * Error handling
 * Testing on Safari and Android
-
+  
+  
 ## Support
 rDataTable is provided "as-is" with no direct developer support. If you find an issue with the visual, please log it here on GitHub. Please note that logging an issue is no guarantee that your issue will be resolved.
