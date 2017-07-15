@@ -1,8 +1,12 @@
 # rDataTable  
+
+R custom visual for Microsoft Power BI  
+
 *version 1.0.0*  
 David Eldersveld  
 
-R custom visual for Microsoft Power BI   
+![**Download rDataTable**](https://github.com/deldersveld/rDataTable/raw/master/dist/rDataTable-1.0.0.pbiviz)
+ 
 
 ![](https://github.com/deldersveld/rDataTable/raw/master/images/rDataTable.PNG)
 
