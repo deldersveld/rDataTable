@@ -2,12 +2,12 @@
 
 R custom visual for Microsoft Power BI  
 
-*version 1.0.0*  
+*version 1.0.1*  
 **David Eldersveld**  
 
 Based on the [DT package](https://rstudio.github.io/DT/), **rDataTable** is an interactive Power BI **R** custom visual that helps you easily explore table data. rDataTable is currently in preview and is only available using the "import as file" option, not through the Office Store.
 
-[**Download rDataTable *(preview)***](https://github.com/deldersveld/rDataTable/raw/master/packaged-versions/rDataTable-1.0.0.pbiviz)
+[**Download rDataTable *(preview)***](https://github.com/deldersveld/rDataTable/raw/master/packaged-versions/rDataTable-1.0.1.pbiviz)
  
 
 ![](https://github.com/deldersveld/rDataTable/raw/master/images/rDataTable.PNG)
@@ -29,9 +29,16 @@ Some of the benefits of rDataTable include:
   ![](https://github.com/deldersveld/rDataTable/raw/master/images/ColumnFilters1.PNG)  
   ![](https://github.com/deldersveld/rDataTable/raw/master/images/ColumnFilters2.PNG)  
   ![](https://github.com/deldersveld/rDataTable/raw/master/images/ColumnFilters3.PNG)  
+  
+## Format Options
+Under *Format*, a section called *Visual Settings* contains various format options:
+* **Initial Entries** - Choose the default number of entries/records per page
+* **Filters** - Choose how to display the column filters (Top, Bottom, None)
 
-**NOTES:**  
-* rDataTable currently does not provide any **Format** options.
+![](https://github.com/deldersveld/rDataTable/raw/master/images/FormatOptions.PNG)  
+
+
+## NOTES
 * User-defined selections and filters are not preserved between sessions. When used in a report, the initial view will appear with all of the data specified under Values (defaults to 5 entries to page, no column filters, no search value). This limitation makes it a good exploratory but not necessarily a good explanatory visual.
 * Optimal visual height is **415px or greater**.
 
@@ -57,7 +64,7 @@ This functionality is not available to any R Visuals in Power BI as of July 2017
 rDataTable is an open-source project available under the MIT license. Feel free to fork, develop, and submit a pull request if you have changes or fixes.  		
 		
 Particular areas of need include:  		
-* Adding Format options so that users can customize items such as default records per page, etc.		
+* Adding additional Format options so that users can customize items.		
 * Determining if there is a way to easily obtain Power BI's data formats such as Currency and Percentage and apply that in R visuals like rDataTable		
 * Error handling		
 * Testing on Safari and Android  
