@@ -30,6 +30,11 @@ module powerbi.extensibility.visual {
     /*interface VisualSettings {
         lineColor: string;
     }*/
+	
+	interface VisualSettingsRDataTableParams {
+        method: string;
+		showColumnFilters: string;
+    }
 
     // to allow this scenario you should first the following JSON definition to the capabilities.json file
     // under the "objects" property:
@@ -58,6 +63,7 @@ module powerbi.extensibility.visual {
         private headNodes: Node[];
         private bodyNodes: Node[];
         private settings: VisualSettings;
+		private settings_rdatatable_params: VisualSettingsRDataTableParams;
 
         public constructor(options: VisualConstructorOptions) {
             if (options && options.element) {
@@ -65,6 +71,11 @@ module powerbi.extensibility.visual {
             }
             this.headNodes = [];
             this.bodyNodes = [];
+			
+			this.settings_rdatatable_params = <VisualSettingsRDataTableParams>{
+                method: "5",
+				showColumnFilters: "top",
+            };
         }
 
         public update(options: VisualUpdateOptions): void {
@@ -79,6 +90,12 @@ module powerbi.extensibility.visual {
             }
             const dataView: DataView = options.dataViews[0];
             this.settings = Visual.parseSettings(dataView);
+			
+			this.settings_rdatatable_params = <VisualSettingsRDataTableParams>{
+                method: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'method', "5"),
+				showColumnFilters: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'showColumnFilters', "top"),
+            };
+
 
             let payloadBase64: string = null;
             if (dataView.scriptResult && dataView.scriptResult.payloadBase64) {
@@ -154,9 +171,25 @@ module powerbi.extensibility.visual {
          * objects and properties you want to expose to the users in the property pane.
          * 
          */
-        public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions):
-            VisualObjectInstance[] | VisualObjectInstanceEnumerationObject {
-            return VisualSettings.enumerateObjectInstances(this.settings || VisualSettings.getDefault(), options);
+        public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstanceEnumeration {
+            //VisualObjectInstance[] | VisualObjectInstanceEnumerationObject {
+				let objectName = options.objectName;
+				let objectEnumeration = [];
+				
+				switch (objectName) {
+					case 'settings_rdatatable_params':
+						objectEnumeration.push({
+                            objectName: objectName,
+                            properties: {
+                                method: this.settings_rdatatable_params.method,
+								showColumnFilters: this.settings_rdatatable_params.showColumnFilters,
+                            },
+                            selector: null
+                        });
+				}
+				
+			return objectEnumeration;
+            //return VisualSettings.enumerateObjectInstances(this.settings || VisualSettings.getDefault(), options);
         }
     }
 }

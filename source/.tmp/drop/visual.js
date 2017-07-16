@@ -632,6 +632,149 @@ var powerbi;
         })(visual = extensibility.visual || (extensibility.visual = {}));
     })(extensibility = powerbi.extensibility || (powerbi.extensibility = {}));
 })(powerbi || (powerbi = {}));
+var powerbi;
+(function (powerbi) {
+    var extensibility;
+    (function (extensibility) {
+        var visual;
+        (function (visual) {
+            var rDataTableF01A81A1541448719C37BCD0F9EABDD7;
+            (function (rDataTableF01A81A1541448719C37BCD0F9EABDD7) {
+                /**
+                 * Gets property value for a particular object.
+                 *
+                 * @function
+                 * @param {DataViewObjects} objects - Map of defined objects.
+                 * @param {string} objectName       - Name of desired object.
+                 * @param {string} propertyName     - Name of desired property.
+                 * @param {T} defaultValue          - Default value of desired property.
+                 */
+                function getValue(objects, objectName, propertyName, defaultValue) {
+                    if (objects) {
+                        var object = objects[objectName];
+                        if (object) {
+                            var property = object[propertyName];
+                            if (property !== undefined) {
+                                return property;
+                            }
+                        }
+                    }
+                    return defaultValue;
+                }
+                rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue = getValue;
+                /**
+                 * Gets property value for a particular object.
+                 *
+                 * @function
+                 * @param {DataViewObjects} objects - Map of defined objects.
+                 * @param {string} objectName       - Name of desired object.
+                 * @param {string} propertyName     - Name of desired property.
+                 * @param {T} defaultValue          - Default value of desired property.
+                 */
+                function getValueMinMax(objects, objectName, propertyName, defaultValue, minVal, maxVal) {
+                    if (objects) {
+                        var object = objects[objectName];
+                        if (object) {
+                            var property = object[propertyName];
+                            if (property < minVal) {
+                                return minVal;
+                            }
+                            if (property > maxVal) {
+                                return maxVal;
+                            }
+                            if (property !== undefined) {
+                                return property;
+                            }
+                        }
+                    }
+                    return defaultValue;
+                }
+                rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValueMinMax = getValueMinMax;
+                /**
+                * Gets property value for a particular object.
+                *
+                * @function
+                * @param {DataViewObjects} objects - Map of defined objects.
+                * @param {string} objectName       - Name of desired object.
+                * @param {string} propertyName     - Name of desired property.
+                * @param {T} defaultValue          - Default value of desired property.
+                */
+                function getValueNumberMinMax(objects, objectName, propertyName, defaultValue, minValue, maxValue) {
+                    if (objects) {
+                        var object = objects[objectName];
+                        if (object) {
+                            var property = object[propertyName];
+                            if (property !== undefined) {
+                                if (property > maxValue) {
+                                    return maxValue;
+                                }
+                                if (property < minValue) {
+                                    return minValue;
+                                }
+                                return property;
+                            }
+                        }
+                    }
+                    return defaultValue;
+                }
+                rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValueNumberMinMax = getValueNumberMinMax;
+                /**
+                     * Gets conditional property value for a particular object of type string
+                     *
+                     * @function
+                     * @param {string} inVal     - current value of parameter
+                     * @param {string} contrVal   - control value
+                     * @param {string} contrVal2Compare     - specific string to be compared with contrVal
+                     * @param {boolean} logic          -  true / false "logic"
+                     * @param {string} outValIfCondTrue          - output value if comparison (contrVal == contrVal2Compare) comes out as "logic"
+                     */
+                function ifStringReturnString(inVal, contrVal, contrVal2Compare, outValIfCondTrue, logic, applyNow) {
+                    if (applyNow && contrVal === contrVal2Compare && logic === true)
+                        return outValIfCondTrue;
+                    if (applyNow && contrVal !== contrVal2Compare && logic === false)
+                        return outValIfCondTrue;
+                    return inVal;
+                }
+                rDataTableF01A81A1541448719C37BCD0F9EABDD7.ifStringReturnString = ifStringReturnString;
+                function inMinMax(a, mi, ma) {
+                    if (a < mi)
+                        return mi;
+                    if (a > ma)
+                        return ma;
+                    return a;
+                }
+                rDataTableF01A81A1541448719C37BCD0F9EABDD7.inMinMax = inMinMax;
+                /**
+                 * Gets property value for a particular object in a category.
+                 *
+                 * @function
+                 * @param {DataViewCategoryColumn} category - List of category objects.
+                 * @param {number} index                    - Index of category object.
+                 * @param {string} objectName               - Name of desired object.
+                 * @param {string} propertyName             - Name of desired property.
+                 * @param {T} defaultValue                  - Default value of desired property.
+                 */
+                function getCategoricalObjectValue(category, index, objectName, propertyName, defaultValue) {
+                    var categoryObjects = category.objects;
+                    if (categoryObjects) {
+                        var categoryObject = categoryObjects[index];
+                        if (categoryObject) {
+                            var object = categoryObject[objectName];
+                            if (object) {
+                                var property = object[propertyName];
+                                if (property !== undefined) {
+                                    return property;
+                                }
+                            }
+                        }
+                    }
+                    return defaultValue;
+                }
+                rDataTableF01A81A1541448719C37BCD0F9EABDD7.getCategoricalObjectValue = getCategoricalObjectValue;
+            })(rDataTableF01A81A1541448719C37BCD0F9EABDD7 = visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7 || (visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7 = {}));
+        })(visual = extensibility.visual || (extensibility.visual = {}));
+    })(extensibility = powerbi.extensibility || (powerbi.extensibility = {}));
+})(powerbi || (powerbi = {}));
 /*
  *  Power BI Visual CLI
  *
@@ -666,11 +809,6 @@ var powerbi;
             var rDataTableF01A81A1541448719C37BCD0F9EABDD7;
             (function (rDataTableF01A81A1541448719C37BCD0F9EABDD7) {
                 "use strict";
-                // below is a snippet of a definition for an object which will contain the property values
-                // selected by the users
-                /*interface VisualSettings {
-                    lineColor: string;
-                }*/
                 // to allow this scenario you should first the following JSON definition to the capabilities.json file
                 // under the "objects" property:
                 // "settings": {
@@ -698,6 +836,10 @@ var powerbi;
                         }
                         this.headNodes = [];
                         this.bodyNodes = [];
+                        this.settings_rdatatable_params = {
+                            method: "5",
+                            showColumnFilters: "top",
+                        };
                     }
                     Visual.prototype.update = function (options) {
                         if (!options ||
@@ -710,6 +852,10 @@ var powerbi;
                         }
                         var dataView = options.dataViews[0];
                         this.settings = Visual.parseSettings(dataView);
+                        this.settings_rdatatable_params = {
+                            method: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'method', "5"),
+                            showColumnFilters: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'showColumnFilters', "top"),
+                        };
                         var payloadBase64 = null;
                         if (dataView.scriptResult && dataView.scriptResult.payloadBase64) {
                             payloadBase64 = dataView.scriptResult.payloadBase64;
@@ -776,7 +922,22 @@ var powerbi;
                      *
                      */
                     Visual.prototype.enumerateObjectInstances = function (options) {
-                        return rDataTableF01A81A1541448719C37BCD0F9EABDD7.VisualSettings.enumerateObjectInstances(this.settings || rDataTableF01A81A1541448719C37BCD0F9EABDD7.VisualSettings.getDefault(), options);
+                        //VisualObjectInstance[] | VisualObjectInstanceEnumerationObject {
+                        var objectName = options.objectName;
+                        var objectEnumeration = [];
+                        switch (objectName) {
+                            case 'settings_rdatatable_params':
+                                objectEnumeration.push({
+                                    objectName: objectName,
+                                    properties: {
+                                        method: this.settings_rdatatable_params.method,
+                                        showColumnFilters: this.settings_rdatatable_params.showColumnFilters,
+                                    },
+                                    selector: null
+                                });
+                        }
+                        return objectEnumeration;
+                        //return VisualSettings.enumerateObjectInstances(this.settings || VisualSettings.getDefault(), options);
                     };
                     return Visual;
                 }());
@@ -795,7 +956,7 @@ var powerbi;
                 name: 'rDataTableF01A81A1541448719C37BCD0F9EABDD7',
                 displayName: 'rDataTable',
                 class: 'Visual',
-                version: '1.0.0',
+                version: '1.0.1',
                 apiVersion: '1.7.0',
                 create: function (options) { return new powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7.Visual(options); },
                 custom: true

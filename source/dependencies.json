@@ -2,8 +2,18 @@
   "cranPackages": [
     {
       "name": "htmlwidgets",
-      "displayName": "HTML Widgets",
+      "displayName": "htmlwidgets",
       "url": "https://cran.r-project.org/web/packages/htmlwidgets/index.html"
+    },
+	{
+      "name": "htmltools",
+      "displayName": "htmltools",
+      "url": "https://cran.r-project.org/web/packages/htmltools/index.html"
+    },
+	{
+      "name": "magrittr",
+      "displayName": "magrittr",
+      "url": "https://cran.r-project.org/web/packages/magrittr/index.html"
     },
 	{
       "name": "DT",

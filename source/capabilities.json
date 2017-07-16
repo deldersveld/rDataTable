@@ -45,7 +45,7 @@
       "properties": {
         "provider": {
           "type": {
-            "text": false
+            "text": true
           }
         },
         "source": {
@@ -55,6 +55,64 @@
             }
           }
         }
+      }
+    },
+	"settings_rdatatable_params": {
+      "displayName": "Visual Settings",
+      "description": "Settings to control the look and feel of rDataTables",
+      "properties": {
+        "method": {
+          "displayName": "Initial Entries",
+          "description": "Control the default number of records displayed per page",
+          "type": {
+            "enumeration": [
+              {
+                "displayName": "5",
+                "value": "5"
+              },
+              {
+                "displayName": "10",
+                "value": "10"
+              },
+              {
+                "displayName": "25",
+                "value": "25"
+              },
+              {
+                "displayName": "50",
+                "value": "50"
+              },
+              {
+                "displayName": "100",
+                "value": "100"
+              },
+              {
+                "displayName": "1000",
+                "value": "1000"
+              }
+            ]
+          }
+        },
+		"showColumnFilters":{
+            "displayName": "Filters",
+			"description": "Display column filters",
+            "type": {
+              "enumeration": [
+				  {
+					"displayName": "Top",
+					"value": "top"
+				  },
+				  {
+					"displayName": "Bottom",
+					"value": "bottom"
+				  },
+				  {
+					"displayName": "None",
+					"value": "none"
+				  }
+				]
+            }
+        }  
       }
     }
   },
