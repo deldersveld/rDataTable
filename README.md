@@ -39,7 +39,7 @@ Under *Format*, a section called *Visual Settings* contains various format optio
 
 
 ## NOTES
-* User-defined selections and filters are not preserved between sessions. When used in a report, the initial view will appear with all of the data specified under Values (defaults to 5 entries to page, no column filters, no search value). This limitation makes it a good exploratory but not necessarily a good explanatory visual.
+* User-defined selections and filters are not preserved between sessions. When used in a report, the initial view will appear with all of the data specified under Values (defaults to 5 entries to page, no in-visual filters applied, no search value). This limitation makes it a good exploratory but not necessarily a good explanatory visual.
 * Optimal visual height is **415px or greater**.
 
 ## Environments  
