@@ -72,3 +72,9 @@ Particular areas of need include:
   
 ## Support
 rDataTable is provided "as-is" with no direct developer support. If you find an issue with the visual, please log it here on GitHub. Please note that logging an issue is no guarantee that your issue will be resolved.
+
+
+## Changelog
+* 1.0.1 - July 15, 2017
+  * Added Format options for Initial Entries and Filters
+  * Adjusted Dependencies.json
