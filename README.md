@@ -2,12 +2,12 @@
 
 R custom visual for Microsoft Power BI  
 
-*version 1.0.1*  
+*version 1.1.0*  
 **David Eldersveld**  
 
 Based on the [DT package](https://rstudio.github.io/DT/), **rDataTable** is an interactive Power BI **R** custom visual that helps you easily explore table data. rDataTable is currently in preview and is only available using the "import as file" option using the version found in this repository. It has not been submitted to the Office Store.
 
-[**Download rDataTable *(preview)***](https://github.com/deldersveld/rDataTable/raw/master/packaged-versions/rDataTable-1.0.1.pbiviz)
+[**Download rDataTable *(preview)***](https://github.com/deldersveld/rDataTable/raw/master/packaged-versions/rDataTable-1.1.0.pbiviz)
  
 
 ![](https://github.com/deldersveld/rDataTable/raw/master/images/rDataTable.PNG)
@@ -75,6 +75,8 @@ rDataTable is provided "as-is" with no direct developer support. If you find an 
 
 
 ## Changelog
+* 1.1.0 - October 10, 2017
+  * Corrected issue where unicode characters were not appearing correctly
 * 1.0.1 - July 15, 2017
   * Added Format options for Initial Entries and Filters
   * Adjusted Dependencies.json
