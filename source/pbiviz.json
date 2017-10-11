@@ -4,15 +4,15 @@
     "displayName": "rDataTable",
     "guid": "rDataTableF01A81A1541448719C37BCD0F9EABDD7",
     "visualClassName": "Visual",
-    "version": "1.0.1",
-    "description": "",
-    "supportUrl": "",
-    "gitHubUrl": ""
+    "version": "1.1.0",
+    "description": "Implementation of R 'DT' package in Power BI",
+    "supportUrl": "https://github.com/deldersveld/rDataTable/issues",
+    "gitHubUrl": "https://github.com/deldersveld/rDataTable"
   },
   "apiVersion": "1.7.0",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "David Eldersveld, BlueGranite",
+    "email": "david@dataveld.com"
   },
   "assets": {
     "icon": "assets/icon.png"
