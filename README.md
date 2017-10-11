@@ -5,7 +5,7 @@ R custom visual for Microsoft Power BI
 *version 1.0.1*  
 **David Eldersveld**  
 
-Based on the [DT package](https://rstudio.github.io/DT/), **rDataTable** is an interactive Power BI **R** custom visual that helps you easily explore table data. rDataTable is currently in preview and is only available using the "import as file" option, not through the Office Store.
+Based on the [DT package](https://rstudio.github.io/DT/), **rDataTable** is an interactive Power BI **R** custom visual that helps you easily explore table data. rDataTable is currently in preview and is only available using the "import as file" option using the version found in this repository. It has not been submitted to the Office Store.
 
 [**Download rDataTable *(preview)***](https://github.com/deldersveld/rDataTable/raw/master/packaged-versions/rDataTable-1.0.1.pbiviz)
  
@@ -17,7 +17,7 @@ Based on the [DT package](https://rstudio.github.io/DT/), **rDataTable** is an i
 Some of the benefits of rDataTable include:  
 
 * **Search** 
-  * Global search field filters data across all columns  
+  * Global search field to filter data across all columns  
   ![](https://github.com/deldersveld/rDataTable/raw/master/images/GlobalSearch.PNG)  
   
 * **Pagination**
@@ -72,3 +72,9 @@ Particular areas of need include:
   
 ## Support
 rDataTable is provided "as-is" with no direct developer support. If you find an issue with the visual, please log it here on GitHub. Please note that logging an issue is no guarantee that your issue will be resolved.
+
+
+## Changelog
+* 1.0.1 - July 15, 2017
+  * Added Format options for Initial Entries and Filters
+  * Adjusted Dependencies.json
