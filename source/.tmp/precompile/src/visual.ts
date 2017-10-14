@@ -30,10 +30,10 @@ module powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7  
     /*interface VisualSettings {
         lineColor: string;
     }*/
-	
-	interface VisualSettingsRDataTableParams {
+
+    interface VisualSettingsRDataTableParams {
         method: string;
-		showColumnFilters: string;
+        showColumnFilters: string;
     }
 
     // to allow this scenario you should first the following JSON definition to the capabilities.json file
@@ -63,7 +63,7 @@ module powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7  
         private headNodes: Node[];
         private bodyNodes: Node[];
         private settings: VisualSettings;
-		private settings_rdatatable_params: VisualSettingsRDataTableParams;
+        private settings_rdatatable_params: VisualSettingsRDataTableParams;
 
         public constructor(options: VisualConstructorOptions) {
             if (options && options.element) {
@@ -71,10 +71,10 @@ module powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7  
             }
             this.headNodes = [];
             this.bodyNodes = [];
-			
-			this.settings_rdatatable_params = <VisualSettingsRDataTableParams>{
+
+            this.settings_rdatatable_params = <VisualSettingsRDataTableParams>{
                 method: "5",
-				showColumnFilters: "top",
+                showColumnFilters: "top",
             };
         }
 
@@ -90,10 +90,10 @@ module powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7  
             }
             const dataView: DataView = options.dataViews[0];
             this.settings = Visual.parseSettings(dataView);
-			
-			this.settings_rdatatable_params = <VisualSettingsRDataTableParams>{
+
+            this.settings_rdatatable_params = <VisualSettingsRDataTableParams>{
                 method: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'method', "5"),
-				showColumnFilters: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'showColumnFilters', "top"),
+                showColumnFilters: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'showColumnFilters', "top"),
             };
 
 
@@ -128,17 +128,17 @@ module powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7  
 
             // create 'virtual' HTML, so parsing is easier
 
-            //utf-8 characters not appearing correctly using atob
-            //this function pulled as workaround from https://stackoverflow.com/questions/30106476/using-javascripts-atob-to-decode-base64-doesnt-properly-decode-utf-8-strings
+            // utf-8 characters not appearing correctly using atob
+            // this function pulled as workaround from https://stackoverflow.com/questions/30106476/using-javascripts-atob-to-decode-base64-doesnt-properly-decode-utf-8-strings
             function b64DecodeUnicode(str) {
                 return decodeURIComponent(Array.prototype.map.call(atob(str), function(c) {
-                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
-                }).join(''))
+                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                }).join(''));
             }
 
             let el: HTMLHtmlElement = document.createElement("html");
             try {
-                //el.innerHTML = window.atob(payloadBase64);
+                // el.innerHTML = window.atob(payloadBase64);
                 el.innerHTML = b64DecodeUnicode(payloadBase64);
             } catch (err) {
                 return;
@@ -176,30 +176,30 @@ module powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7  
             return VisualSettings.parse(dataView) as VisualSettings;
         }
 
-        /** 
-         * This function gets called for each of the objects defined in the capabilities files and allows you to select which of the 
+        /**
+         * This function gets called for each of the objects defined in the capabilities files and allows you to select which of the
          * objects and properties you want to expose to the users in the property pane.
-         * 
+         *
          */
         public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstanceEnumeration {
-            //VisualObjectInstance[] | VisualObjectInstanceEnumerationObject {
-				let objectName = options.objectName;
-				let objectEnumeration = [];
-				
-				switch (objectName) {
-					case 'settings_rdatatable_params':
-						objectEnumeration.push({
+            // VisualObjectInstance[] | VisualObjectInstanceEnumerationObject {
+                let objectName = options.objectName;
+                let objectEnumeration = [];
+
+                switch (objectName) {
+                    case 'settings_rdatatable_params':
+                        objectEnumeration.push({
                             objectName: objectName,
                             properties: {
                                 method: this.settings_rdatatable_params.method,
-								showColumnFilters: this.settings_rdatatable_params.showColumnFilters,
+                                showColumnFilters: this.settings_rdatatable_params.showColumnFilters,
                             },
                             selector: null
                         });
-				}
-				
-			return objectEnumeration;
-            //return VisualSettings.enumerateObjectInstances(this.settings || VisualSettings.getDefault(), options);
+                }
+
+            return objectEnumeration;
+            // return VisualSettings.enumerateObjectInstances(this.settings || VisualSettings.getDefault(), options);
         }
     }
 }

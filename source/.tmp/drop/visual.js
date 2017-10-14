@@ -881,8 +881,8 @@ var powerbi;
                             return;
                         }
                         // create 'virtual' HTML, so parsing is easier
-                        //utf-8 characters not appearing correctly using atob
-                        //this function pulled as workaround from https://stackoverflow.com/questions/30106476/using-javascripts-atob-to-decode-base64-doesnt-properly-decode-utf-8-strings
+                        // utf-8 characters not appearing correctly using atob
+                        // this function pulled as workaround from https://stackoverflow.com/questions/30106476/using-javascripts-atob-to-decode-base64-doesnt-properly-decode-utf-8-strings
                         function b64DecodeUnicode(str) {
                             return decodeURIComponent(Array.prototype.map.call(atob(str), function (c) {
                                 return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
@@ -890,7 +890,7 @@ var powerbi;
                         }
                         var el = document.createElement("html");
                         try {
-                            //el.innerHTML = window.atob(payloadBase64);
+                            // el.innerHTML = window.atob(payloadBase64);
                             el.innerHTML = b64DecodeUnicode(payloadBase64);
                         }
                         catch (err) {
@@ -930,7 +930,7 @@ var powerbi;
                      *
                      */
                     Visual.prototype.enumerateObjectInstances = function (options) {
-                        //VisualObjectInstance[] | VisualObjectInstanceEnumerationObject {
+                        // VisualObjectInstance[] | VisualObjectInstanceEnumerationObject {
                         var objectName = options.objectName;
                         var objectEnumeration = [];
                         switch (objectName) {
@@ -945,7 +945,7 @@ var powerbi;
                                 });
                         }
                         return objectEnumeration;
-                        //return VisualSettings.enumerateObjectInstances(this.settings || VisualSettings.getDefault(), options);
+                        // return VisualSettings.enumerateObjectInstances(this.settings || VisualSettings.getDefault(), options);
                     };
                     return Visual;
                 }());
@@ -964,7 +964,7 @@ var powerbi;
                 name: 'rDataTableF01A81A1541448719C37BCD0F9EABDD7',
                 displayName: 'rDataTable',
                 class: 'Visual',
-                version: '1.1.0',
+                version: '1.1.0.1',
                 apiVersion: '1.7.0',
                 create: function (options) { return new powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7.Visual(options); },
                 custom: true
