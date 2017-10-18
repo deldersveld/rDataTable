@@ -31,7 +31,7 @@
       "fileMatch": [
         "/dependencies.json"
       ],
-      "url": "./.api/v1.6.0/schema.dependencies.json"
+      "url": "./.api/v1.7.0/schema.dependencies.json"
     }
   ]
 }
