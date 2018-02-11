@@ -1,14 +1,14 @@
 {
   "cranPackages": [
     {
-      "name": "htmlwidgets",
-      "displayName": "htmlwidgets",
-      "url": "https://cran.r-project.org/web/packages/htmlwidgets/index.html"
-    },
-	{
       "name": "htmltools",
       "displayName": "htmltools",
       "url": "https://cran.r-project.org/web/packages/htmltools/index.html"
+    },
+    {
+      "name": "htmlwidgets",
+      "displayName": "htmlwidgets",
+      "url": "https://cran.r-project.org/web/packages/htmlwidgets/index.html"
     },
 	{
       "name": "magrittr",
@@ -19,6 +19,11 @@
       "name": "DT",
       "displayName": "DT",
       "url": "https://cran.r-project.org/web/packages/DT/index.html"
+    },
+    {
+      "name": "plotly",
+      "displayName": "plotly",
+      "url": "https://cran.r-project.org/web/packages/plotly/index.html"
     }
   ]
 }
