@@ -16,6 +16,11 @@
       "url": "https://cran.r-project.org/web/packages/magrittr/index.html"
     },
 	{
+      "name": "XML",
+      "displayName": "XML",
+      "url": "https://cran.r-project.org/web/packages/XML/index.html"
+    },
+	{
       "name": "DT",
       "displayName": "DT",
       "url": "https://cran.r-project.org/web/packages/DT/index.html"
