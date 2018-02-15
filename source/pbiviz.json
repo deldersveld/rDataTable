@@ -4,7 +4,7 @@
     "displayName": "rDataTable",
     "guid": "rDataTableF01A81A1541448719C37BCD0F9EABDD7",
     "visualClassName": "Visual",
-    "version": "1.1.0.1",
+    "version": "1.1.0.2",
     "description": "Implementation of R 'DT' package in Power BI",
     "supportUrl": "https://deldersveld.github.io/powerbi/support/rdatatable",
     "gitHubUrl": "https://github.com/deldersveld/rDataTable"
