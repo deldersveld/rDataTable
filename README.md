@@ -1,20 +1,20 @@
-# rDataTable (preview)  
+# R DataTable
 
 R custom visual for Microsoft Power BI  
 
 *version 1.1.0*  
 **David Eldersveld**  
 
-Based on the [DT package](https://rstudio.github.io/DT/), **rDataTable** is an interactive Power BI **R** custom visual that helps you easily explore table data. It is pending approval in the Office Store / AppSource.
+Based on the [DT package](https://rstudio.github.io/DT/), **R DataTable** is an interactive Power BI **R** custom visual that helps you easily explore table data. It is pending approval in the Office Store / AppSource.
 
-[**Download rDataTable *(preview)***](https://github.com/deldersveld/rDataTable/raw/master/packaged-versions/rDataTable-1.1.0.pbiviz)
+[**Download R DataTable from AppSource***](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381459?tab=Overview)
  
 
 ![](https://github.com/deldersveld/rDataTable/raw/master/images/rDataTable.PNG)
 
   
 ## Functionality  
-Some of the benefits of rDataTable include:  
+Some of the benefits of R DataTable include:  
 
 * **Search** 
   * Global search field to filter data across all columns  
@@ -45,13 +45,13 @@ Under *Format*, a section called *Visual Settings* contains various format optio
 ## Environments  
 
 ### Power BI Desktop
-rDataTable requires the **htmlwidgets** and **DT** packages installed in your local R environment to work with Power BI Desktop.
+R DataTable requires the **htmlwidgets** and **DT** packages installed in your local R environment to work with Power BI Desktop.
 
 ### Power BI Service
-All required packages are currently available in the Power BI Service. rDataTable runs in Power BI Service and has been tested in Chrome, Firefox, and Edge.
+All required packages are currently available in the Power BI Service. R DataTable runs in Power BI Service and has been tested in Chrome, Firefox, and Edge.
 
 ### Power BI Mobile
-rDataTable runs as a fully interactive visual in the Mobile app and has been tested in iOS (Android testing still needed).  
+R DataTable runs as a fully interactive visual in the Mobile app and has been tested in iOS (Android testing still needed).  
 ![](https://github.com/deldersveld/rDataTable/raw/master/images/iOS0.jpg)   
 ![](https://github.com/deldersveld/rDataTable/raw/master/images/iOS1.jpg)   
 ![](https://github.com/deldersveld/rDataTable/raw/master/images/iOS2.jpg)
@@ -61,7 +61,7 @@ This functionality is not available to any R Visuals in Power BI as of July 2017
   
   
 ## Develop!		
-rDataTable is an open-source project available under the MIT license. Feel free to fork, develop, and submit a pull request if you have changes or fixes.  		
+R DataTable is an open-source project available under the MIT license. Feel free to fork, develop, and submit a pull request if you have changes or fixes.  		
 		
 Particular areas of need include:  		
 * Adding additional Format options so that users can customize items.		
@@ -71,7 +71,7 @@ Particular areas of need include:
  
   
 ## Support
-rDataTable is provided "as-is" with no direct developer support. If you find an issue with the visual, please log it here on GitHub. Please note that logging an issue is no guarantee that your issue will be resolved.
+R DataTable is provided "as-is" with no direct developer support. If you find an issue with the visual, please log it here on GitHub. Please note that logging an issue is no guarantee that your issue will be resolved.
 
 
 ## Changelog
@@ -79,4 +79,7 @@ rDataTable is provided "as-is" with no direct developer support. If you find an 
   * Corrected issue where unicode characters were not appearing correctly
 * 1.0.1 - July 15, 2017
   * Added Format options for Initial Entries and Filters
+  * Adjusted Dependencies.json
+* 1.1.0 
+  * Packaged for Microsoft AppSource
   * Adjusted Dependencies.json
