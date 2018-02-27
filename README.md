@@ -5,7 +5,7 @@ R custom visual for Microsoft Power BI
 *version 1.1.0*  
 **David Eldersveld**  
 
-Based on the [DT package](https://rstudio.github.io/DT/), **R DataTable** is an interactive Power BI **R** custom visual that helps you easily explore table data. It is pending approval in the Office Store / AppSource.
+Based on the [DT package](https://rstudio.github.io/DT/), **R DataTable** is an interactive Power BI **R** custom visual that helps you easily explore table data.  
 
 [**Download R DataTable from AppSource***](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381459?tab=Overview)
  
