@@ -34,6 +34,7 @@ module powerbi.extensibility.visual {
     interface VisualSettingsRDataTableParams {
         method: string;
         showColumnFilters: string;
+		limitDecimalPlaces: string;
     }
 
     // to allow this scenario you should first the following JSON definition to the capabilities.json file
@@ -75,6 +76,7 @@ module powerbi.extensibility.visual {
             this.settings_rdatatable_params = <VisualSettingsRDataTableParams>{
                 method: "5",
                 showColumnFilters: "top",
+				limitDecimalPlaces: "2",
             };
         }
 
@@ -94,6 +96,7 @@ module powerbi.extensibility.visual {
             this.settings_rdatatable_params = <VisualSettingsRDataTableParams>{
                 method: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'method', "5"),
                 showColumnFilters: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'showColumnFilters', "top"),
+				limitDecimalPlaces: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'limitDecimalPlaces', "2")
             };
 
 
@@ -193,6 +196,7 @@ module powerbi.extensibility.visual {
                             properties: {
                                 method: this.settings_rdatatable_params.method,
                                 showColumnFilters: this.settings_rdatatable_params.showColumnFilters,
+								limitDecimalPlaces: this.settings_rdatatable_params.limitDecimalPlaces,
                             },
                             selector: null
                         });

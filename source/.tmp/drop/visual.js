@@ -501,11 +501,16 @@ var powerbi;
     })(extensibility = powerbi.extensibility || (powerbi.extensibility = {}));
 })(powerbi || (powerbi = {}));
 
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var powerbi;
 (function (powerbi) {
     var extensibility;
@@ -839,6 +844,7 @@ var powerbi;
                         this.settings_rdatatable_params = {
                             method: "5",
                             showColumnFilters: "top",
+                            limitDecimalPlaces: "2",
                         };
                     }
                     Visual.prototype.update = function (options) {
@@ -855,6 +861,7 @@ var powerbi;
                         this.settings_rdatatable_params = {
                             method: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'method', "5"),
                             showColumnFilters: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'showColumnFilters', "top"),
+                            limitDecimalPlaces: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'limitDecimalPlaces', "2")
                         };
                         var payloadBase64 = null;
                         if (dataView.scriptResult && dataView.scriptResult.payloadBase64) {
@@ -940,6 +947,7 @@ var powerbi;
                                     properties: {
                                         method: this.settings_rdatatable_params.method,
                                         showColumnFilters: this.settings_rdatatable_params.showColumnFilters,
+                                        limitDecimalPlaces: this.settings_rdatatable_params.limitDecimalPlaces,
                                     },
                                     selector: null
                                 });
@@ -964,7 +972,7 @@ var powerbi;
                 name: 'rDataTableF01A81A1541448719C37BCD0F9EABDD7',
                 displayName: 'rDataTable',
                 class: 'Visual',
-                version: '1.1.0.2',
+                version: '1.1.0.3',
                 apiVersion: '1.7.0',
                 create: function (options) { return new powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7.Visual(options); },
                 custom: true

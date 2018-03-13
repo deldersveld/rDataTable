@@ -15,6 +15,14 @@ if (!exists("settings_rdatatable_params_showColumnFilters"))
     settings_rdatatable_params_showColumnFilters = "top";
 }
 
+if (!exists("settings_rdatatable_params_limitDecimalPlaces"))
+{
+    settings_rdatatable_params_limitDecimalPlaces = 2;
+}
+
+idx <- sapply(Values, class)=="numeric"
+Values[, idx] <- lapply(Values[, idx], formatC, digits = as.numeric(settings_rdatatable_params_limitDecimalPlaces), format = "f")
+
 p <- datatable(Values, 
 		class = 'cell-border compact stripe hover', 
 		rownames = FALSE, 

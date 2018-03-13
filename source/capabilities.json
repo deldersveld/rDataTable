@@ -112,6 +112,38 @@
 				  }
 				]
             }
+        },
+		"limitDecimalPlaces":{
+            "displayName": "Decimal digits",
+			"description": "Limit decimal places for decimal fields. Not able to obtain user-specified formatting at the field level for R visuals.",
+            "type": {
+              "enumeration": [
+				  {
+					"displayName": "0",
+					"value": "0"
+				  },
+				  {
+					"displayName": "1",
+					"value": "1"
+				  },
+				  {
+					"displayName": "2",
+					"value": "2"
+				  },
+				  {
+					"displayName": "3",
+					"value": "3"
+				  },
+				  {
+					"displayName": "4",
+					"value": "4"
+				  },
+				  {
+					"displayName": "5",
+					"value": "5"
+				  }
+				]
+            }
         }  
       }
     }
