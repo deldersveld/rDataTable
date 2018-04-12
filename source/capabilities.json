@@ -59,7 +59,7 @@
     },
 	"settings_rdatatable_params": {
       "displayName": "Visual Settings",
-      "description": "Settings to control the look and feel of rDataTables",
+      "description": "Settings to control the look and feel of R DataTable",
       "properties": {
         "method": {
           "displayName": "Initial Entries",
@@ -147,7 +147,7 @@
         },
 		"fontSize": {
           "displayName": "Font size",
-          "description": "Adjust the font size for rows, columns, values, and totals",
+          "description": "Adjust the font size for column headings and values",
           "type": {
             "enumeration": [{
                 "displayName": "10",
