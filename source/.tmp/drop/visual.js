@@ -845,6 +845,7 @@ var powerbi;
                             method: "5",
                             showColumnFilters: "top",
                             limitDecimalPlaces: "2",
+                            fontSize: "12px"
                         };
                     }
                     Visual.prototype.update = function (options) {
@@ -861,7 +862,8 @@ var powerbi;
                         this.settings_rdatatable_params = {
                             method: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'method', "5"),
                             showColumnFilters: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'showColumnFilters', "top"),
-                            limitDecimalPlaces: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'limitDecimalPlaces', "2")
+                            limitDecimalPlaces: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'limitDecimalPlaces', "2"),
+                            fontSize: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'fontSize', "12px")
                         };
                         var payloadBase64 = null;
                         if (dataView.scriptResult && dataView.scriptResult.payloadBase64) {
@@ -916,6 +918,16 @@ var powerbi;
                                 this.headNodes = rDataTableF01A81A1541448719C37BCD0F9EABDD7.ParseElement(head, document.head);
                             }
                         }
+                        // User-selected Format option styles
+                        var css = document.createElement("style");
+                        css.type = "text/css";
+                        css.innerHTML = ".odd { font-size: " + this.settings_rdatatable_params.fontSize + ";} " +
+                            ".even { font-size: " + this.settings_rdatatable_params.fontSize + ";} " +
+                            ".dt-right { font-size: " + this.settings_rdatatable_params.fontSize + ";} " +
+                            ".sorting { font-size: " + this.settings_rdatatable_params.fontSize + ";} " +
+                            ".sorting_desc { font-size: " + this.settings_rdatatable_params.fontSize + ";} " +
+                            ".sorting_asc { font-size: " + this.settings_rdatatable_params.fontSize + ";} ";
+                        document.body.appendChild(css);
                         // update 'body' nodes, under the rootElement
                         while (this.bodyNodes.length > 0) {
                             var tempNode = this.bodyNodes.pop();
@@ -948,6 +960,7 @@ var powerbi;
                                         method: this.settings_rdatatable_params.method,
                                         showColumnFilters: this.settings_rdatatable_params.showColumnFilters,
                                         limitDecimalPlaces: this.settings_rdatatable_params.limitDecimalPlaces,
+                                        fontSize: this.settings_rdatatable_params.fontSize
                                     },
                                     selector: null
                                 });
@@ -972,7 +985,7 @@ var powerbi;
                 name: 'rDataTableF01A81A1541448719C37BCD0F9EABDD7',
                 displayName: 'rDataTable',
                 class: 'Visual',
-                version: '1.1.0.3',
+                version: '1.1.0.4',
                 apiVersion: '1.7.0',
                 create: function (options) { return new powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7.Visual(options); },
                 custom: true

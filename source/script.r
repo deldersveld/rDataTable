@@ -28,6 +28,7 @@ p <- datatable(Values,
 		rownames = FALSE, 
 		filter = settings_rdatatable_params_showColumnFilters, 
 		width = "100%", 
+		height = "95vh",
 		extensions = list('Scroller'), 
 		options = list(
 			pageLength = settings_rdatatable_params_method,
@@ -38,6 +39,10 @@ p <- datatable(Values,
 			scroller = TRUE
 		)
 	)
+	
+# adjust padding to use entire container
+p$sizingPolicy$browser$padding = 0
+	
 ####################################################
 
 ############# Create and save widget ###############

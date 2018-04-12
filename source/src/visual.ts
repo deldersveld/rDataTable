@@ -35,6 +35,7 @@ module powerbi.extensibility.visual {
         method: string;
         showColumnFilters: string;
 		limitDecimalPlaces: string;
+		fontSize: string;
     }
 
     // to allow this scenario you should first the following JSON definition to the capabilities.json file
@@ -77,6 +78,7 @@ module powerbi.extensibility.visual {
                 method: "5",
                 showColumnFilters: "top",
 				limitDecimalPlaces: "2",
+				fontSize: "12px"
             };
         }
 
@@ -96,7 +98,8 @@ module powerbi.extensibility.visual {
             this.settings_rdatatable_params = <VisualSettingsRDataTableParams>{
                 method: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'method', "5"),
                 showColumnFilters: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'showColumnFilters', "top"),
-				limitDecimalPlaces: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'limitDecimalPlaces', "2")
+				limitDecimalPlaces: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'limitDecimalPlaces', "2"),
+				fontSize: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'fontSize', "12px")
             };
 
 
@@ -160,6 +163,17 @@ module powerbi.extensibility.visual {
                     this.headNodes = ParseElement(head, document.head);
                 }
             }
+			
+			// User-selected Format option styles
+            let css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".odd { font-size: " + this.settings_rdatatable_params.fontSize + ";} " +
+                ".even { font-size: " + this.settings_rdatatable_params.fontSize + ";} " +
+                ".dt-right { font-size: " + this.settings_rdatatable_params.fontSize + ";} " +
+                ".sorting { font-size: " + this.settings_rdatatable_params.fontSize + ";} " +
+				".sorting_desc { font-size: " + this.settings_rdatatable_params.fontSize + ";} " +
+                ".sorting_asc { font-size: " + this.settings_rdatatable_params.fontSize + ";} ";
+            document.body.appendChild(css);
 
             // update 'body' nodes, under the rootElement
             while (this.bodyNodes.length > 0) {
@@ -197,6 +211,7 @@ module powerbi.extensibility.visual {
                                 method: this.settings_rdatatable_params.method,
                                 showColumnFilters: this.settings_rdatatable_params.showColumnFilters,
 								limitDecimalPlaces: this.settings_rdatatable_params.limitDecimalPlaces,
+								fontSize: this.settings_rdatatable_params.fontSize
                             },
                             selector: null
                         });

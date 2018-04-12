@@ -144,7 +144,38 @@
 				  }
 				]
             }
-        }  
+        },
+		"fontSize": {
+          "displayName": "Font size",
+          "description": "Adjust the font size for rows, columns, values, and totals",
+          "type": {
+            "enumeration": [{
+                "displayName": "10",
+                "value": "10px"
+              },
+              {
+                "displayName": "12",
+                "value": "12px"
+              },
+              {
+                "displayName": "14",
+                "value": "14px"
+              },
+              {
+                "displayName": "16",
+                "value": "16px"
+              },
+              {
+                "displayName": "18",
+                "value": "18px"
+              },
+              {
+                "displayName": "20",
+                "value": "20px"
+              }
+            ]
+          }
+        }
       }
     }
   },
