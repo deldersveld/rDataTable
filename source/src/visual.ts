@@ -34,6 +34,8 @@ module powerbi.extensibility.visual {
     interface VisualSettingsRDataTableParams {
         method: string;
         showColumnFilters: string;
+        showChanges: string;
+        showCompact: string;
 		limitDecimalPlaces: string;
 		fontSize: string;
     }
@@ -77,6 +79,8 @@ module powerbi.extensibility.visual {
             this.settings_rdatatable_params = <VisualSettingsRDataTableParams>{
                 method: "5",
                 showColumnFilters: "top",
+                showChanges: "no",
+                showCompact: "no",
 				limitDecimalPlaces: "2",
 				fontSize: "12px"
             };
@@ -98,6 +102,8 @@ module powerbi.extensibility.visual {
             this.settings_rdatatable_params = <VisualSettingsRDataTableParams>{
                 method: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'method', "5"),
                 showColumnFilters: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'showColumnFilters', "top"),
+                showChanges: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'showChanges', "no"),
+                showCompact: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'showCompact', "no"),
 				limitDecimalPlaces: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'limitDecimalPlaces', "2"),
 				fontSize: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'fontSize', "12px")
             };
@@ -163,7 +169,7 @@ module powerbi.extensibility.visual {
                     this.headNodes = ParseElement(head, document.head);
                 }
             }
-			
+
 			// User-selected Format option styles
             let css = document.createElement("style");
             css.type = "text/css";
@@ -210,6 +216,8 @@ module powerbi.extensibility.visual {
                             properties: {
                                 method: this.settings_rdatatable_params.method,
                                 showColumnFilters: this.settings_rdatatable_params.showColumnFilters,
+                                showChanges: this.settings_rdatatable_params.showChanges,
+                                showCompact: this.settings_rdatatable_params.showCompact,
 								limitDecimalPlaces: this.settings_rdatatable_params.limitDecimalPlaces,
 								fontSize: this.settings_rdatatable_params.fontSize
                             },

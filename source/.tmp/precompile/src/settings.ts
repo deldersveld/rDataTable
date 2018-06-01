@@ -24,7 +24,7 @@
  *  THE SOFTWARE.
  */
 
-module powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7  {
+module powerbi.extensibility.visual.rDataTable1E31640E1F5745CAB826AF450430250A  {
     "use strict";
 
     import DataViewObjectsParser = powerbi.extensibility.utils.dataview.DataViewObjectsParser;
