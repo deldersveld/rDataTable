@@ -34,6 +34,10 @@ if (!exists("settings_rdatatable_params_showCompact"))
 idx <- sapply(Values, class)=="numeric"
 Values[, idx] <- lapply(Values[, idx], formatC, digits = as.numeric(settings_rdatatable_params_limitDecimalPlaces), format = "f")
 
+if (settings_rdatatable_params_showChanges == "yes") {
+  Values <- Values[, dim(table(Values)) != 1]
+}
+
 if (settings_rdatatable_params_showCompact == "yes") {
   p <- datatable(
     Values,
