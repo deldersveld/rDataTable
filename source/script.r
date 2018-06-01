@@ -23,7 +23,7 @@ if (!exists("settings_rdatatable_params_limitDecimalPlaces"))
 if (!exists("settings_rdatatable_params_showChanges"))
 {
   settings_rdatatable_params_showChanges = "no"
-  
+
 }
 
 if (!exists("settings_rdatatable_params_showCompact"))
@@ -33,6 +33,10 @@ if (!exists("settings_rdatatable_params_showCompact"))
 
 idx <- sapply(Values, class)=="numeric"
 Values[, idx] <- lapply(Values[, idx], formatC, digits = as.numeric(settings_rdatatable_params_limitDecimalPlaces), format = "f")
+
+if (settings_rdatatable_params_showChanges == "yes") {
+  Values <- Values[, dim(table(Values)) != 1]
+}
 
 if (settings_rdatatable_params_showCompact == "yes") {
   p <- datatable(
@@ -48,7 +52,7 @@ if (settings_rdatatable_params_showCompact == "yes") {
       autoWidth = FALSE,
       scroller = FALSE
     )
-  ) 
+  )
 } else {
   p <- datatable(
     Values,
@@ -56,24 +60,24 @@ if (settings_rdatatable_params_showCompact == "yes") {
     rownames = FALSE,
     filter = settings_rdatatable_params_showColumnFilters,
     width = "100%",
-    height = "95vh",
+    height = "100%",
     extensions = list('Scroller'),
-    
+
     options = list(
       pageLength = settings_rdatatable_params_method,
-      lengthMenu = c(5, 10, 25, 50, 100, 1000),
+      lengthMenu = c(5, 10, 15, 20, 25, 50, 100, 1000),
       autoWidth = FALSE,
       scrollX = "100%",
-      scrollY = "50vh",
+      scrollY = "100%",
       scroller = TRUE
     )
-    
+
   )
 }
-	
+
 # adjust padding to use entire container
 p$sizingPolicy$browser$padding = 0
-	
+
 ####################################################
 
 ############# Create and save widget ###############
