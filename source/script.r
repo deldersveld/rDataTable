@@ -76,7 +76,7 @@ if (settings_rdatatable_params_showCompact == "yes") {
 }
 
 # adjust padding to use entire container
-p$sizingPolicy$browser$padding = 0
+p$sizingPolicy$browser$padding <- 0
 
 ####################################################
 
