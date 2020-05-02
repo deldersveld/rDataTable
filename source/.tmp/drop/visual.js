@@ -517,18 +517,18 @@ var powerbi;
     (function (extensibility) {
         var visual;
         (function (visual) {
-            var rDataTableF01A81A1541448719C37BCD0F9EABDD7;
-            (function (rDataTableF01A81A1541448719C37BCD0F9EABDD7) {
+            var rDataTable1E31640E1F5745CAB826AF450430250A;
+            (function (rDataTable1E31640E1F5745CAB826AF450430250A) {
                 "use strict";
                 var injectorCounter = 0;
                 function ResetInjector() {
                     injectorCounter = 0;
                 }
-                rDataTableF01A81A1541448719C37BCD0F9EABDD7.ResetInjector = ResetInjector;
+                rDataTable1E31640E1F5745CAB826AF450430250A.ResetInjector = ResetInjector;
                 function injectorReady() {
                     return injectorCounter === 0;
                 }
-                rDataTableF01A81A1541448719C37BCD0F9EABDD7.injectorReady = injectorReady;
+                rDataTable1E31640E1F5745CAB826AF450430250A.injectorReady = injectorReady;
                 function ParseElement(el, target) {
                     var arr = [];
                     if (!el || !el.hasChildNodes()) {
@@ -548,7 +548,7 @@ var powerbi;
                     }
                     return arr;
                 }
-                rDataTableF01A81A1541448719C37BCD0F9EABDD7.ParseElement = ParseElement;
+                rDataTable1E31640E1F5745CAB826AF450430250A.ParseElement = ParseElement;
                 function createScriptNode(refNode) {
                     var script = document.createElement("script");
                     var attr = refNode.attributes;
@@ -577,8 +577,8 @@ var powerbi;
                         }
                     }, 100);
                 }
-                rDataTableF01A81A1541448719C37BCD0F9EABDD7.RunHTMLWidgetRenderer = RunHTMLWidgetRenderer;
-            })(rDataTableF01A81A1541448719C37BCD0F9EABDD7 = visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7 || (visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7 = {}));
+                rDataTable1E31640E1F5745CAB826AF450430250A.RunHTMLWidgetRenderer = RunHTMLWidgetRenderer;
+            })(rDataTable1E31640E1F5745CAB826AF450430250A = visual.rDataTable1E31640E1F5745CAB826AF450430250A || (visual.rDataTable1E31640E1F5745CAB826AF450430250A = {}));
         })(visual = extensibility.visual || (extensibility.visual = {}));
     })(extensibility = powerbi.extensibility || (powerbi.extensibility = {}));
 })(powerbi || (powerbi = {}));
@@ -613,8 +613,8 @@ var powerbi;
     (function (extensibility) {
         var visual;
         (function (visual) {
-            var rDataTableF01A81A1541448719C37BCD0F9EABDD7;
-            (function (rDataTableF01A81A1541448719C37BCD0F9EABDD7) {
+            var rDataTable1E31640E1F5745CAB826AF450430250A;
+            (function (rDataTable1E31640E1F5745CAB826AF450430250A) {
                 "use strict";
                 var DataViewObjectsParser = powerbi.extensibility.utils.dataview.DataViewObjectsParser;
                 var VisualSettings = (function (_super) {
@@ -626,14 +626,14 @@ var powerbi;
                     }
                     return VisualSettings;
                 }(DataViewObjectsParser));
-                rDataTableF01A81A1541448719C37BCD0F9EABDD7.VisualSettings = VisualSettings;
+                rDataTable1E31640E1F5745CAB826AF450430250A.VisualSettings = VisualSettings;
                 var rcv_scriptSettings = (function () {
                     function rcv_scriptSettings() {
                     }
                     return rcv_scriptSettings;
                 }());
-                rDataTableF01A81A1541448719C37BCD0F9EABDD7.rcv_scriptSettings = rcv_scriptSettings;
-            })(rDataTableF01A81A1541448719C37BCD0F9EABDD7 = visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7 || (visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7 = {}));
+                rDataTable1E31640E1F5745CAB826AF450430250A.rcv_scriptSettings = rcv_scriptSettings;
+            })(rDataTable1E31640E1F5745CAB826AF450430250A = visual.rDataTable1E31640E1F5745CAB826AF450430250A || (visual.rDataTable1E31640E1F5745CAB826AF450430250A = {}));
         })(visual = extensibility.visual || (extensibility.visual = {}));
     })(extensibility = powerbi.extensibility || (powerbi.extensibility = {}));
 })(powerbi || (powerbi = {}));
@@ -643,8 +643,8 @@ var powerbi;
     (function (extensibility) {
         var visual;
         (function (visual) {
-            var rDataTableF01A81A1541448719C37BCD0F9EABDD7;
-            (function (rDataTableF01A81A1541448719C37BCD0F9EABDD7) {
+            var rDataTable1E31640E1F5745CAB826AF450430250A;
+            (function (rDataTable1E31640E1F5745CAB826AF450430250A) {
                 /**
                  * Gets property value for a particular object.
                  *
@@ -666,7 +666,7 @@ var powerbi;
                     }
                     return defaultValue;
                 }
-                rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue = getValue;
+                rDataTable1E31640E1F5745CAB826AF450430250A.getValue = getValue;
                 /**
                  * Gets property value for a particular object.
                  *
@@ -694,7 +694,7 @@ var powerbi;
                     }
                     return defaultValue;
                 }
-                rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValueMinMax = getValueMinMax;
+                rDataTable1E31640E1F5745CAB826AF450430250A.getValueMinMax = getValueMinMax;
                 /**
                 * Gets property value for a particular object.
                 *
@@ -722,7 +722,7 @@ var powerbi;
                     }
                     return defaultValue;
                 }
-                rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValueNumberMinMax = getValueNumberMinMax;
+                rDataTable1E31640E1F5745CAB826AF450430250A.getValueNumberMinMax = getValueNumberMinMax;
                 /**
                      * Gets conditional property value for a particular object of type string
                      *
@@ -740,7 +740,7 @@ var powerbi;
                         return outValIfCondTrue;
                     return inVal;
                 }
-                rDataTableF01A81A1541448719C37BCD0F9EABDD7.ifStringReturnString = ifStringReturnString;
+                rDataTable1E31640E1F5745CAB826AF450430250A.ifStringReturnString = ifStringReturnString;
                 function inMinMax(a, mi, ma) {
                     if (a < mi)
                         return mi;
@@ -748,7 +748,7 @@ var powerbi;
                         return ma;
                     return a;
                 }
-                rDataTableF01A81A1541448719C37BCD0F9EABDD7.inMinMax = inMinMax;
+                rDataTable1E31640E1F5745CAB826AF450430250A.inMinMax = inMinMax;
                 /**
                  * Gets property value for a particular object in a category.
                  *
@@ -775,8 +775,8 @@ var powerbi;
                     }
                     return defaultValue;
                 }
-                rDataTableF01A81A1541448719C37BCD0F9EABDD7.getCategoricalObjectValue = getCategoricalObjectValue;
-            })(rDataTableF01A81A1541448719C37BCD0F9EABDD7 = visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7 || (visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7 = {}));
+                rDataTable1E31640E1F5745CAB826AF450430250A.getCategoricalObjectValue = getCategoricalObjectValue;
+            })(rDataTable1E31640E1F5745CAB826AF450430250A = visual.rDataTable1E31640E1F5745CAB826AF450430250A || (visual.rDataTable1E31640E1F5745CAB826AF450430250A = {}));
         })(visual = extensibility.visual || (extensibility.visual = {}));
     })(extensibility = powerbi.extensibility || (powerbi.extensibility = {}));
 })(powerbi || (powerbi = {}));
@@ -811,8 +811,8 @@ var powerbi;
     (function (extensibility) {
         var visual;
         (function (visual) {
-            var rDataTableF01A81A1541448719C37BCD0F9EABDD7;
-            (function (rDataTableF01A81A1541448719C37BCD0F9EABDD7) {
+            var rDataTable1E31640E1F5745CAB826AF450430250A;
+            (function (rDataTable1E31640E1F5745CAB826AF450430250A) {
                 "use strict";
                 // to allow this scenario you should first the following JSON definition to the capabilities.json file
                 // under the "objects" property:
@@ -844,6 +844,8 @@ var powerbi;
                         this.settings_rdatatable_params = {
                             method: "5",
                             showColumnFilters: "top",
+                            showChanges: "no",
+                            showCompact: "no",
                             limitDecimalPlaces: "2",
                             fontSize: "12px"
                         };
@@ -860,10 +862,12 @@ var powerbi;
                         var dataView = options.dataViews[0];
                         this.settings = Visual.parseSettings(dataView);
                         this.settings_rdatatable_params = {
-                            method: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'method', "5"),
-                            showColumnFilters: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'showColumnFilters', "top"),
-                            limitDecimalPlaces: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'limitDecimalPlaces', "2"),
-                            fontSize: rDataTableF01A81A1541448719C37BCD0F9EABDD7.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'fontSize', "12px")
+                            method: rDataTable1E31640E1F5745CAB826AF450430250A.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'method', "5"),
+                            showColumnFilters: rDataTable1E31640E1F5745CAB826AF450430250A.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'showColumnFilters', "top"),
+                            showChanges: rDataTable1E31640E1F5745CAB826AF450430250A.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'showChanges', "no"),
+                            showCompact: rDataTable1E31640E1F5745CAB826AF450430250A.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'showCompact', "no"),
+                            limitDecimalPlaces: rDataTable1E31640E1F5745CAB826AF450430250A.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'limitDecimalPlaces', "2"),
+                            fontSize: rDataTable1E31640E1F5745CAB826AF450430250A.getValue(dataView.metadata.objects, 'settings_rdatatable_params', 'fontSize', "12px")
                         };
                         var payloadBase64 = null;
                         if (dataView.scriptResult && dataView.scriptResult.payloadBase64) {
@@ -885,7 +889,7 @@ var powerbi;
                         // inject HTML from payload, created in R
                         // the code is injected to the 'head' and 'body' sections.
                         // if the visual was already rendered, the previous DOM elements are cleared
-                        rDataTableF01A81A1541448719C37BCD0F9EABDD7.ResetInjector();
+                        rDataTable1E31640E1F5745CAB826AF450430250A.ResetInjector();
                         if (!payloadBase64) {
                             return;
                         }
@@ -915,7 +919,7 @@ var powerbi;
                             var headList = el.getElementsByTagName("head");
                             if (headList && headList.length > 0) {
                                 var head = headList[0];
-                                this.headNodes = rDataTableF01A81A1541448719C37BCD0F9EABDD7.ParseElement(head, document.head);
+                                this.headNodes = rDataTable1E31640E1F5745CAB826AF450430250A.ParseElement(head, document.head);
                             }
                         }
                         // User-selected Format option styles
@@ -936,12 +940,12 @@ var powerbi;
                         var bodyList = el.getElementsByTagName("body");
                         if (bodyList && bodyList.length > 0) {
                             var body = bodyList[0];
-                            this.bodyNodes = rDataTableF01A81A1541448719C37BCD0F9EABDD7.ParseElement(body, this.rootElement);
+                            this.bodyNodes = rDataTable1E31640E1F5745CAB826AF450430250A.ParseElement(body, this.rootElement);
                         }
-                        rDataTableF01A81A1541448719C37BCD0F9EABDD7.RunHTMLWidgetRenderer();
+                        rDataTable1E31640E1F5745CAB826AF450430250A.RunHTMLWidgetRenderer();
                     };
                     Visual.parseSettings = function (dataView) {
-                        return rDataTableF01A81A1541448719C37BCD0F9EABDD7.VisualSettings.parse(dataView);
+                        return rDataTable1E31640E1F5745CAB826AF450430250A.VisualSettings.parse(dataView);
                     };
                     /**
                      * This function gets called for each of the objects defined in the capabilities files and allows you to select which of the
@@ -959,6 +963,8 @@ var powerbi;
                                     properties: {
                                         method: this.settings_rdatatable_params.method,
                                         showColumnFilters: this.settings_rdatatable_params.showColumnFilters,
+                                        showChanges: this.settings_rdatatable_params.showChanges,
+                                        showCompact: this.settings_rdatatable_params.showCompact,
                                         limitDecimalPlaces: this.settings_rdatatable_params.limitDecimalPlaces,
                                         fontSize: this.settings_rdatatable_params.fontSize
                                     },
@@ -970,8 +976,8 @@ var powerbi;
                     };
                     return Visual;
                 }());
-                rDataTableF01A81A1541448719C37BCD0F9EABDD7.Visual = Visual;
-            })(rDataTableF01A81A1541448719C37BCD0F9EABDD7 = visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7 || (visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7 = {}));
+                rDataTable1E31640E1F5745CAB826AF450430250A.Visual = Visual;
+            })(rDataTable1E31640E1F5745CAB826AF450430250A = visual.rDataTable1E31640E1F5745CAB826AF450430250A || (visual.rDataTable1E31640E1F5745CAB826AF450430250A = {}));
         })(visual = extensibility.visual || (extensibility.visual = {}));
     })(extensibility = powerbi.extensibility || (powerbi.extensibility = {}));
 })(powerbi || (powerbi = {}));
@@ -981,13 +987,13 @@ var powerbi;
     (function (visuals) {
         var plugins;
         (function (plugins) {
-            plugins.rDataTableF01A81A1541448719C37BCD0F9EABDD7 = {
-                name: 'rDataTableF01A81A1541448719C37BCD0F9EABDD7',
+            plugins.rDataTable1E31640E1F5745CAB826AF450430250A = {
+                name: 'rDataTable1E31640E1F5745CAB826AF450430250A',
                 displayName: 'rDataTable',
                 class: 'Visual',
-                version: '1.1.0.4',
+                version: '1.1.0.5',
                 apiVersion: '1.7.0',
-                create: function (options) { return new powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7.Visual(options); },
+                create: function (options) { return new powerbi.extensibility.visual.rDataTable1E31640E1F5745CAB826AF450430250A.Visual(options); },
                 custom: true
             };
         })(plugins = visuals.plugins || (visuals.plugins = {}));

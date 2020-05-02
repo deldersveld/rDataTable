@@ -23,7 +23,7 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  *  THE SOFTWARE.
  */
-module powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7  {
+module powerbi.extensibility.visual.rDataTable1E31640E1F5745CAB826AF450430250A  {
     "use strict";
     // below is a snippet of a definition for an object which will contain the property values
     // selected by the users
@@ -34,6 +34,8 @@ module powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7  
     interface VisualSettingsRDataTableParams {
         method: string;
         showColumnFilters: string;
+        showChanges: string;
+        showCompact: string;
 		limitDecimalPlaces: string;
 		fontSize: string;
     }
@@ -77,6 +79,8 @@ module powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7  
             this.settings_rdatatable_params = <VisualSettingsRDataTableParams>{
                 method: "5",
                 showColumnFilters: "top",
+                showChanges: "no",
+                showCompact: "no",
 				limitDecimalPlaces: "2",
 				fontSize: "12px"
             };
@@ -98,6 +102,8 @@ module powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7  
             this.settings_rdatatable_params = <VisualSettingsRDataTableParams>{
                 method: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'method', "5"),
                 showColumnFilters: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'showColumnFilters', "top"),
+                showChanges: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'showChanges', "no"),
+                showCompact: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'showCompact', "no"),
 				limitDecimalPlaces: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'limitDecimalPlaces', "2"),
 				fontSize: getValue<string>(dataView.metadata.objects, 'settings_rdatatable_params', 'fontSize', "12px")
             };
@@ -163,7 +169,7 @@ module powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7  
                     this.headNodes = ParseElement(head, document.head);
                 }
             }
-			
+
 			// User-selected Format option styles
             let css = document.createElement("style");
             css.type = "text/css";
@@ -210,6 +216,8 @@ module powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7  
                             properties: {
                                 method: this.settings_rdatatable_params.method,
                                 showColumnFilters: this.settings_rdatatable_params.showColumnFilters,
+                                showChanges: this.settings_rdatatable_params.showChanges,
+                                showCompact: this.settings_rdatatable_params.showCompact,
 								limitDecimalPlaces: this.settings_rdatatable_params.limitDecimalPlaces,
 								fontSize: this.settings_rdatatable_params.fontSize
                             },

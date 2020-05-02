@@ -1,11 +1,11 @@
 module powerbi.visuals.plugins {
-    export var rDataTableF01A81A1541448719C37BCD0F9EABDD7 = {
-        name: 'rDataTableF01A81A1541448719C37BCD0F9EABDD7',
+    export var rDataTable1E31640E1F5745CAB826AF450430250A = {
+        name: 'rDataTable1E31640E1F5745CAB826AF450430250A',
         displayName: 'rDataTable',
         class: 'Visual',
-        version: '1.1.0.4',
+        version: '1.1.0.5',
         apiVersion: '1.7.0',
-        create: (options: extensibility.visual.VisualConstructorOptions) => new powerbi.extensibility.visual.rDataTableF01A81A1541448719C37BCD0F9EABDD7.Visual(options),
+        create: (options: extensibility.visual.VisualConstructorOptions) => new powerbi.extensibility.visual.rDataTable1E31640E1F5745CAB826AF450430250A.Visual(options),
         custom: true
     };
 }

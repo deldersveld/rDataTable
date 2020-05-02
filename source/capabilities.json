@@ -75,6 +75,14 @@
                 "value": "10"
               },
               {
+                "displayName": "15",
+                "value": "15"
+              },
+              {
+                "displayName": "20",
+                "value": "20"
+              },
+              {
                 "displayName": "25",
                 "value": "25"
               },
@@ -113,6 +121,38 @@
 				]
             }
         },
+        "showChanges":{
+                "displayName": "Changes",
+          "description": "Display only lines with changes",
+                "type": {
+                  "enumeration": [
+              {
+              "displayName": "Yes",
+              "value": "yes"
+              },
+              {
+              "displayName": "No",
+              "value": "no"
+              }
+            ]
+                }
+            },
+            "showCompact":{
+                    "displayName": "Compact",
+              "description": "Display compact version of the table",
+                    "type": {
+                      "enumeration": [
+                  {
+                  "displayName": "Yes",
+                  "value": "yes"
+                  },
+                  {
+                  "displayName": "No",
+                  "value": "no"
+                  }
+                ]
+                    }
+                },
 		"limitDecimalPlaces":{
             "displayName": "Decimal digits",
 			"description": "Limit decimal places for decimal fields. Not able to obtain user-specified formatting at the field level for R visuals.",
